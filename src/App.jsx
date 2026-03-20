@@ -1,7 +1,7 @@
-import Cube from "./cube";
+import Cube from "./cube.jsx";
 
 function App() {
   return <Cube />;
 }
 
-export default App
+export default App;

@@ -36,7 +36,12 @@ function Cube() {
 
     // Cleanup
     return () => {
+      if (mountRef.current && renderer.domElement.parentNode === mountRef.current) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
       renderer.dispose();
+      geometry.dispose();
+      material.dispose();
     };
   }, []);
 
